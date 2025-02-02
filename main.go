@@ -1,9 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"log"
+
+	"github.com/aethiopicuschan/chiilang/cmd"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
+	err := cmd.Execute()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
